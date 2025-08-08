@@ -2,59 +2,105 @@ import torch
 import torch.nn as nn
 import math
 import numpy as np
-# class LSTM(nn.Module):
-#     def __init__(self, input_size, hidden_size, num_layers, output_size, dropout):
-#         super(LSTM, self).__init__()
-#         self.hidden_size = hidden_size
-#         self.num_layers = num_layers
 
-#         self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True)
-#         # 全连接层
-#         self.fc = nn.Linear(hidden_size, output_size)
-#         self.dropout = nn.Dropout(dropout)
-#         self.fc = nn.Sequential(
-#             nn.Linear(hidden_size, output_size),
-#             nn.ReLU()
-#             # nn.Sigmoid()
-#         )
+class LSTM(nn.Module):
+    def __init__(self, input_size, hidden_size, num_layers, output_size, dropout):
+        super(LSTM, self).__init__()
+        self.hidden_size = hidden_size
+        self.num_layers = num_layers
+        
+        # 定义LSTM层
+        self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True)
+        
+        # 添加Layer Normalization
+        self.ln = nn.LayerNorm(hidden_size)
+        
+        # 全连接层 - 包含一个隐藏层，增加非线性映射能力
+        self.fc = nn.Sequential(
+            nn.Linear(hidden_size, hidden_size // 2),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            # nn.Linear(hidden_size // 2, output_size)
+            nn.Linear(hidden_size // 2, output_size)
+            # 不再使用ReLU激活函数在最后一层，适用于回归任务
+        )
+        
+        # 初始化LSTM权重
+        self.init_weights()
 
-#     def forward(self, x):
-#         # 初始化隐藏状态和细胞状态
-#         h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)
-#         c0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)
+    def init_weights(self):
+        for name, param in self.lstm.named_parameters():
+            if 'weight' in name:
+                nn.init.xavier_normal_(param)
+            elif 'bias' in name:
+                nn.init.zeros_(param)
 
-#         out, _ = self.lstm(x, (h0, c0))
-#         out = out[:, -1, :]
-#         out = self.fc(out)
-#         return out
-    
-    
-    
-# class LSTM(nn.Module):
-#     def __init__(self, input_size, hidden_size, num_layers, output_size, dropout):
-#         super(LSTM, self).__init__()
-#         self.hidden_size = hidden_size
-#         self.num_layers = num_layers
+    def forward(self, x):
+        # 初始化隐藏状态和细胞状态
+        h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)
+        c0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)
 
-#         self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True)
-#         # 全连接层
-#         # self.fc = nn.Linear(hidden_size, output_size)
-#         self.dropout = nn.Dropout(dropout)
-#         self.fc = nn.Sequential(
-#             nn.Linear(hidden_size, output_size),
-#             nn.ReLU()
-#             # nn.Sigmoid()
-#         )
+        # LSTM层前向传播
+        out, _ = self.lstm(x, (h0, c0))
+        
+        # 使用Layer Normalization
+        out = self.ln(out[:, -1, :])
+        
+        # 全连接层前向传播
+        out = self.fc(out)
+        # out = out.view(out.size(0), 5, 10)  # Reshape output to (batch_size, 5, 10)    
+        return out
 
-#     def forward(self, x):
-#         # 初始化隐藏状态和细胞状态
-#         h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)
-#         c0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)
 
-#         out, _ = self.lstm(x, (h0, c0))
-#         out = out[:, -1, :]
-#         out = self.fc(out)
-#         return out
+
+class ImprovedLSTM(nn.Module):
+    def __init__(self, input_size, hidden_size, num_layers, output_size, dropout):
+        super(ImprovedLSTM, self).__init__()
+        self.hidden_size = hidden_size
+        self.num_layers = num_layers
+
+        # Bi-directional LSTM for better context understanding
+        self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True, dropout=dropout, bidirectional=True)
+
+        # Layer Normalization after LSTM
+        self.ln = nn.LayerNorm(hidden_size * 2)  # because of bidirectional
+
+        # Attention layer (optional but very useful for sequence focus)
+        self.attn = nn.Sequential(
+            nn.Linear(hidden_size * 2, hidden_size),
+            nn.Tanh(),
+            nn.Linear(hidden_size, 1),
+        )
+
+        # Fully connected layers
+        self.fc = nn.Sequential(
+            nn.Linear(hidden_size * 2, hidden_size),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            nn.Linear(hidden_size, output_size),
+        )
+
+    def forward(self, x):
+        batch_size, seq_len, _ = x.size()
+        h0 = torch.zeros(self.num_layers * 2, batch_size, self.hidden_size).to(x.device)  # *2 for bidirectional
+        c0 = torch.zeros(self.num_layers * 2, batch_size, self.hidden_size).to(x.device)
+
+        # LSTM
+        out, _ = self.lstm(x, (h0, c0))  # out: [B, T, 2H]
+
+        # Layer Normalization
+        out = self.ln(out)  # normalize across hidden features
+
+        # Attention mechanism: weighted sum of all time steps
+        attn_weights = self.attn(out)  # [B, T, 1]
+        attn_weights = torch.softmax(attn_weights, dim=1)  # [B, T, 1]
+        out = torch.sum(out * attn_weights, dim=1)  # [B, 2H]
+
+        # Fully connected layers
+        out = self.fc(out)  # [B, output_size]
+        return out
+ 
+
     
 
 

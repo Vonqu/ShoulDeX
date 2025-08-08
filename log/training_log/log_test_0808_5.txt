@@ -1,0 +1,615 @@
+Model Parameters:
+input_size: 14
+hidden_size: 256
+num_layers: 2
+output_size: 27
+dropout: 0.3
+num_epochs: 300
+learning_rate: 0.001
+lambda_l2: 0.0003
+early_stopping_patience: 10
+early_stopping_threshold: 1e-05
+Enhanced Loss Weights: alpha=1.0, beta=0.08, gamma=0.03, delta=0.15
+
+epoch:0, train_loss:0.03693310543894768, val_loss:0.015570841114302831
+  components - mse:0.02684046, trend:0.04825257, hysteresis:0.01359475, smoothness:0.10991661
+epoch:1, train_loss:0.03166522458195686, val_loss:0.014274195435323886
+  components - mse:0.01904185, trend:0.03697871, hysteresis:0.01707292, smoothness:0.09338918
+epoch:2, train_loss:0.0320977121591568, val_loss:0.013502452289685607
+  components - mse:0.01598859, trend:0.03148052, hysteresis:0.00581672, smoothness:0.08817453
+epoch:3, train_loss:0.029291391372680664, val_loss:0.01191458259043949
+  components - mse:0.01512045, trend:0.02979718, hysteresis:0.01422059, smoothness:0.08212959
+epoch:4, train_loss:0.02821861021220684, val_loss:0.013072319960753833
+  components - mse:0.01446906, trend:0.02868810, hysteresis:0.00977270, smoothness:0.07772131
+epoch:5, train_loss:0.02862357348203659, val_loss:0.013064583663695626
+  components - mse:0.01418974, trend:0.02814708, hysteresis:0.01088948, smoothness:0.07483370
+epoch:6, train_loss:0.025546861812472343, val_loss:0.012047606769816152
+  components - mse:0.01328235, trend:0.02646558, hysteresis:0.00260272, smoothness:0.07539341
+epoch:7, train_loss:0.025474894791841507, val_loss:0.011259582109882363
+  components - mse:0.01298818, trend:0.02584202, hysteresis:0.00215264, smoothness:0.07501314
+epoch:8, train_loss:0.024300724267959595, val_loss:0.010836159511070167
+  components - mse:0.01201324, trend:0.02395475, hysteresis:0.00056340, smoothness:0.07765788
+epoch:9, train_loss:0.025384318083524704, val_loss:0.0107036078614848
+  components - mse:0.01187566, trend:0.02369840, hysteresis:0.00223260, smoothness:0.07776500
+epoch:10, train_loss:0.02677147649228573, val_loss:0.011072980306510414
+  components - mse:0.01148877, trend:0.02285594, hysteresis:0.00245738, smoothness:0.07885150
+epoch:11, train_loss:0.02408648282289505, val_loss:0.011062560835853219
+  components - mse:0.01163358, trend:0.02321781, hysteresis:0.00375696, smoothness:0.07823894
+epoch:12, train_loss:0.024426940828561783, val_loss:0.011606264609976538
+  components - mse:0.01179914, trend:0.02351108, hysteresis:0.00360382, smoothness:0.07744905
+epoch:13, train_loss:0.02586870640516281, val_loss:0.011390977406076022
+  components - mse:0.01169586, trend:0.02331691, hysteresis:0.00274437, smoothness:0.07739904
+epoch:14, train_loss:0.02502349764108658, val_loss:0.010216660764334458
+  components - mse:0.01120836, trend:0.02226809, hysteresis:0.00186313, smoothness:0.07915386
+epoch:15, train_loss:0.02510772831737995, val_loss:0.010843184926281018
+  components - mse:0.01112110, trend:0.02221971, hysteresis:0.00270876, smoothness:0.07936502
+epoch:16, train_loss:0.025128431618213654, val_loss:0.011907777333232974
+  components - mse:0.01275923, trend:0.02547965, hysteresis:0.00171049, smoothness:0.07247922
+epoch:17, train_loss:0.026419183239340782, val_loss:0.01132758377519037
+  components - mse:0.01218437, trend:0.02437479, hysteresis:0.00139942, smoothness:0.07437515
+epoch:18, train_loss:0.024305665865540504, val_loss:0.011290438772578324
+  components - mse:0.01176522, trend:0.02340894, hysteresis:0.00085310, smoothness:0.07611391
+epoch:19, train_loss:0.023694418370723724, val_loss:0.012023689325100608
+  components - mse:0.01203016, trend:0.02400450, hysteresis:0.00586307, smoothness:0.07537589
+epoch:20, train_loss:0.027793806046247482, val_loss:0.014504745685761529
+  components - mse:0.01191721, trend:0.02374435, hysteresis:0.00680630, smoothness:0.07556345
+epoch:21, train_loss:0.02341393381357193, val_loss:0.01160414092841425
+  components - mse:0.01165967, trend:0.02320842, hysteresis:0.00000000, smoothness:0.07674528
+epoch:22, train_loss:0.026065446436405182, val_loss:0.01093159438044365
+  components - mse:0.01117482, trend:0.02235393, hysteresis:0.00211090, smoothness:0.07872820
+epoch:23, train_loss:0.022755244746804237, val_loss:0.010420395211050553
+  components - mse:0.01100309, trend:0.02190097, hysteresis:0.00603488, smoothness:0.07956331
+epoch:24, train_loss:0.02232123166322708, val_loss:0.010058593437341707
+  components - mse:0.01084767, trend:0.02163158, hysteresis:0.00291672, smoothness:0.08001939
+epoch:25, train_loss:0.02396019548177719, val_loss:0.010500470941354121
+  components - mse:0.01064928, trend:0.02119797, hysteresis:0.00204486, smoothness:0.08045339
+epoch:26, train_loss:0.024749886244535446, val_loss:0.009991616243496537
+  components - mse:0.01095266, trend:0.02187251, hysteresis:0.00218491, smoothness:0.07968025
+epoch:27, train_loss:0.024945739656686783, val_loss:0.009426376300065644
+  components - mse:0.01054662, trend:0.02107571, hysteresis:0.00000000, smoothness:0.08101521
+epoch:28, train_loss:0.02518804371356964, val_loss:0.009856125838788492
+  components - mse:0.01062411, trend:0.02120437, hysteresis:0.00220295, smoothness:0.08080795
+epoch:29, train_loss:0.02624964714050293, val_loss:0.010096309274168951
+  components - mse:0.01066511, trend:0.02128391, hysteresis:0.00169723, smoothness:0.08061917
+epoch:30, train_loss:0.022364633157849312, val_loss:0.010397498312938427
+  components - mse:0.01069872, trend:0.02135082, hysteresis:0.00423216, smoothness:0.08049760
+epoch:31, train_loss:0.023816974833607674, val_loss:0.010457365457633776
+  components - mse:0.01074980, trend:0.02132767, hysteresis:0.00169796, smoothness:0.08005399
+epoch:32, train_loss:0.024632811546325684, val_loss:0.009984402684494853
+  components - mse:0.01057748, trend:0.02115589, hysteresis:0.00227739, smoothness:0.08085057
+epoch:33, train_loss:0.025990836322307587, val_loss:0.01040202342639012
+  components - mse:0.01068386, trend:0.02128321, hysteresis:0.00585884, smoothness:0.08041043
+epoch:34, train_loss:0.020662574097514153, val_loss:0.009824009113279837
+  components - mse:0.01081092, trend:0.02151585, hysteresis:0.00359626, smoothness:0.07988260
+epoch:35, train_loss:0.022646591067314148, val_loss:0.009771903394721448
+  components - mse:0.01066112, trend:0.02123222, hysteresis:0.00316903, smoothness:0.08057765
+epoch:36, train_loss:0.0244714617729187, val_loss:0.009927648352459073
+  components - mse:0.01046944, trend:0.02091596, hysteresis:0.00029776, smoothness:0.08109152
+epoch:37, train_loss:0.024845637381076813, val_loss:0.009923666715621948
+  components - mse:0.01050316, trend:0.02092913, hysteresis:0.00230159, smoothness:0.08112015
+epoch:38, train_loss:0.026476480066776276, val_loss:0.01060400903224945
+  components - mse:0.01052070, trend:0.02099533, hysteresis:0.00223384, smoothness:0.08116773
+epoch:39, train_loss:0.02289479598402977, val_loss:0.009922168467060797
+  components - mse:0.01051796, trend:0.02099770, hysteresis:0.00000000, smoothness:0.08091113
+epoch:40, train_loss:0.02242760732769966, val_loss:0.01076704466582409
+  components - mse:0.01063212, trend:0.02121444, hysteresis:0.00331351, smoothness:0.08036337
+epoch:41, train_loss:0.023908359929919243, val_loss:0.00986656975666327
+  components - mse:0.01063295, trend:0.02123954, hysteresis:0.00345845, smoothness:0.08063815
+epoch:42, train_loss:0.024925047531723976, val_loss:0.010156481776253454
+  components - mse:0.01046401, trend:0.02085926, hysteresis:0.00000000, smoothness:0.08127507
+epoch:43, train_loss:0.023839060217142105, val_loss:0.010445351280005915
+  components - mse:0.01052108, trend:0.02103017, hysteresis:0.00096439, smoothness:0.08098167
+epoch:44, train_loss:0.02250632271170616, val_loss:0.009994519126069332
+  components - mse:0.01067623, trend:0.02134021, hysteresis:0.00445649, smoothness:0.08026987
+epoch:45, train_loss:0.023769790306687355, val_loss:0.010354311471538884
+  components - mse:0.01047402, trend:0.02093069, hysteresis:0.00183673, smoothness:0.08108060
+epoch:46, train_loss:0.022157222032546997, val_loss:0.009860294754616916
+  components - mse:0.01050276, trend:0.02095700, hysteresis:0.00209441, smoothness:0.08089057
+epoch:47, train_loss:0.02632969617843628, val_loss:0.010637719849390643
+  components - mse:0.01059818, trend:0.02112822, hysteresis:0.00392195, smoothness:0.08084886
+epoch:48, train_loss:0.024667374789714813, val_loss:0.009582869375922851
+  components - mse:0.01047792, trend:0.02089590, hysteresis:0.00058624, smoothness:0.08103226
+epoch:49, train_loss:0.024420063942670822, val_loss:0.010168613317156476
+  components - mse:0.01039004, trend:0.02069267, hysteresis:0.00064891, smoothness:0.08131901
+epoch:50, train_loss:0.024761458858847618, val_loss:0.010335718930166746
+  components - mse:0.01051044, trend:0.02094565, hysteresis:0.00363551, smoothness:0.08110412
+epoch:51, train_loss:0.024684688076376915, val_loss:0.009634482474731547
+  components - mse:0.01059953, trend:0.02119921, hysteresis:0.00438002, smoothness:0.08082006
+epoch:52, train_loss:0.025570858269929886, val_loss:0.009474403357931547
+  components - mse:0.01047378, trend:0.02088280, hysteresis:0.00360784, smoothness:0.08092630
+epoch:53, train_loss:0.024368971586227417, val_loss:0.01031970716680267
+  components - mse:0.01038836, trend:0.02074834, hysteresis:0.00073218, smoothness:0.08152548
+epoch:54, train_loss:0.025364641100168228, val_loss:0.010302329253006195
+  components - mse:0.01036786, trend:0.02073950, hysteresis:0.00031059, smoothness:0.08140980
+epoch:55, train_loss:0.022887013852596283, val_loss:0.009605894996119397
+  components - mse:0.01034412, trend:0.02064003, hysteresis:0.00148957, smoothness:0.08151907
+epoch:56, train_loss:0.025669850409030914, val_loss:0.010063038723144149
+  components - mse:0.01056244, trend:0.02109579, hysteresis:0.00475022, smoothness:0.08088121
+epoch:57, train_loss:0.02390301786363125, val_loss:0.010362649303195732
+  components - mse:0.01049402, trend:0.02094327, hysteresis:0.00226450, smoothness:0.08116011
+epoch:58, train_loss:0.025537151843309402, val_loss:0.009707238308952324
+  components - mse:0.01047214, trend:0.02092306, hysteresis:0.00377798, smoothness:0.08117658
+epoch:59, train_loss:0.025235187262296677, val_loss:0.010373495469268943
+  components - mse:0.01038829, trend:0.02071221, hysteresis:0.00216033, smoothness:0.08134844
+epoch:60, train_loss:0.02294480800628662, val_loss:0.009827644763780492
+  components - mse:0.01037636, trend:0.02073205, hysteresis:0.00130397, smoothness:0.08151881
+epoch:61, train_loss:0.023309428244829178, val_loss:0.009958979224653117
+  components - mse:0.01044441, trend:0.02088729, hysteresis:0.00439583, smoothness:0.08117467
+epoch:62, train_loss:0.023653345182538033, val_loss:0.009715985955803521
+  components - mse:0.01048945, trend:0.02093142, hysteresis:0.00263975, smoothness:0.08103235
+epoch:63, train_loss:0.023046866059303284, val_loss:0.009895793029240199
+  components - mse:0.01029450, trend:0.02049812, hysteresis:0.00030246, smoothness:0.08171614
+epoch:64, train_loss:0.023716922849416733, val_loss:0.010514117827239846
+  components - mse:0.01029810, trend:0.02055800, hysteresis:0.00056808, smoothness:0.08182675
+epoch:65, train_loss:0.02561030164361, val_loss:0.009997624937178833
+  components - mse:0.01036827, trend:0.02065823, hysteresis:0.00368108, smoothness:0.08146272
+epoch:66, train_loss:0.024616139009594917, val_loss:0.009939021663740277
+  components - mse:0.01029959, trend:0.02062286, hysteresis:0.00034668, smoothness:0.08170451
+epoch:67, train_loss:0.02393842674791813, val_loss:0.010536395512255175
+  components - mse:0.01042020, trend:0.02083699, hysteresis:0.00334938, smoothness:0.08153203
+epoch:68, train_loss:0.023041291162371635, val_loss:0.009691337788743632
+  components - mse:0.01037047, trend:0.02070869, hysteresis:0.00221552, smoothness:0.08131660
+epoch:69, train_loss:0.02389448881149292, val_loss:0.009532285687912787
+  components - mse:0.01034494, trend:0.02067097, hysteresis:0.00252616, smoothness:0.08158552
+epoch:70, train_loss:0.0239593256264925, val_loss:0.010216758652989353
+  components - mse:0.01038986, trend:0.02077818, hysteresis:0.00317231, smoothness:0.08122460
+epoch:71, train_loss:0.02331673353910446, val_loss:0.010039245576730796
+  components - mse:0.01029236, trend:0.02056685, hysteresis:0.00084608, smoothness:0.08185823
+epoch:72, train_loss:0.024248607456684113, val_loss:0.012490732728370599
+  components - mse:0.01030192, trend:0.02058950, hysteresis:0.00339540, smoothness:0.08175884
+epoch:73, train_loss:0.024848870933055878, val_loss:0.009434103001175182
+  components - mse:0.01042173, trend:0.02077983, hysteresis:0.00129307, smoothness:0.08129388
+epoch:74, train_loss:0.02507403865456581, val_loss:0.009586522422198738
+  components - mse:0.01045739, trend:0.02090557, hysteresis:0.00402729, smoothness:0.08113853
+epoch:75, train_loss:0.0267258882522583, val_loss:0.010055634891614318
+  components - mse:0.01034824, trend:0.02066668, hysteresis:0.00134355, smoothness:0.08139902
+epoch:76, train_loss:0.024919915944337845, val_loss:0.01035343689311828
+  components - mse:0.01044912, trend:0.02080587, hysteresis:0.00527329, smoothness:0.08129113
+epoch:77, train_loss:0.02353949099779129, val_loss:0.010523657647094556
+  components - mse:0.01034551, trend:0.02062937, hysteresis:0.00113120, smoothness:0.08160011
+epoch:78, train_loss:0.022776346653699875, val_loss:0.010134563365552043
+  components - mse:0.01031169, trend:0.02062867, hysteresis:0.00077220, smoothness:0.08175298
+epoch:79, train_loss:0.023463089019060135, val_loss:0.009837571697841798
+  components - mse:0.01031941, trend:0.02059485, hysteresis:0.00231903, smoothness:0.08170068
+epoch:80, train_loss:0.02234959602355957, val_loss:0.01046726169131164
+  components - mse:0.01025682, trend:0.02055446, hysteresis:0.00145061, smoothness:0.08198096
+epoch:81, train_loss:0.0238085575401783, val_loss:0.010048508145181196
+  components - mse:0.01039039, trend:0.02078380, hysteresis:0.00223419, smoothness:0.08133605
+epoch:82, train_loss:0.023332547396421432, val_loss:0.01013609766960144
+  components - mse:0.01033341, trend:0.02059778, hysteresis:0.00142558, smoothness:0.08150093
+epoch:83, train_loss:0.02362595871090889, val_loss:0.010184369532258384
+  components - mse:0.01026726, trend:0.02052803, hysteresis:0.00173394, smoothness:0.08181320
+epoch:84, train_loss:0.02278376929461956, val_loss:0.009348462136196238
+  components - mse:0.01044411, trend:0.02079410, hysteresis:0.00382203, smoothness:0.08128907
+epoch:85, train_loss:0.023679094389081, val_loss:0.010183889352317368
+  components - mse:0.01028181, trend:0.02052558, hysteresis:0.00181605, smoothness:0.08172688
+epoch:86, train_loss:0.02620999701321125, val_loss:0.010020655164095973
+  components - mse:0.01033186, trend:0.02061723, hysteresis:0.00171089, smoothness:0.08146481
+epoch:87, train_loss:0.021880175918340683, val_loss:0.009918589693760234
+  components - mse:0.01022096, trend:0.02037898, hysteresis:0.00120664, smoothness:0.08162939
+epoch:88, train_loss:0.022633591666817665, val_loss:0.009586921776644886
+  components - mse:0.01023654, trend:0.02049872, hysteresis:0.00160166, smoothness:0.08184436
+epoch:89, train_loss:0.0251033715903759, val_loss:0.009837077015877835
+  components - mse:0.01027123, trend:0.02050391, hysteresis:0.00184160, smoothness:0.08170239
+epoch:90, train_loss:0.02315322309732437, val_loss:0.010094418340096516
+  components - mse:0.01032845, trend:0.02064273, hysteresis:0.00280064, smoothness:0.08164061
+epoch:91, train_loss:0.023791372776031494, val_loss:0.009911371927176203
+  components - mse:0.01028466, trend:0.02055321, hysteresis:0.00070669, smoothness:0.08170572
+epoch:92, train_loss:0.023992061614990234, val_loss:0.013171982236339577
+  components - mse:0.01039894, trend:0.02076653, hysteresis:0.00405412, smoothness:0.08117452
+epoch:93, train_loss:0.0227493979036808, val_loss:0.009900779080843287
+  components - mse:0.01033570, trend:0.02067025, hysteresis:0.00031999, smoothness:0.08154781
+epoch:94, train_loss:0.026008864864706993, val_loss:0.010014201531053655
+  components - mse:0.01032508, trend:0.02063660, hysteresis:0.00222812, smoothness:0.08155259
+epoch:95, train_loss:0.022962786257267, val_loss:0.010500468862509089
+  components - mse:0.01020856, trend:0.02042782, hysteresis:0.00080606, smoothness:0.08197496
+epoch:96, train_loss:0.025110509246587753, val_loss:0.011544901678072554
+  components - mse:0.01061378, trend:0.02113190, hysteresis:0.00757960, smoothness:0.08052035
+epoch:97, train_loss:0.022897981107234955, val_loss:0.00962948308525873
+  components - mse:0.01046754, trend:0.02085123, hysteresis:0.00563941, smoothness:0.08098559
+epoch:98, train_loss:0.02717471495270729, val_loss:0.010232120652550034
+  components - mse:0.01026055, trend:0.02044444, hysteresis:0.00150174, smoothness:0.08182036
+epoch:99, train_loss:0.0214711781591177, val_loss:0.009980709574717497
+  components - mse:0.01024764, trend:0.02050931, hysteresis:0.00060333, smoothness:0.08184822
+epoch:100, train_loss:0.023800794035196304, val_loss:0.010119048579196845
+  components - mse:0.01029777, trend:0.02057395, hysteresis:0.00230614, smoothness:0.08171389
+epoch:101, train_loss:0.02520773746073246, val_loss:0.009642016109345215
+  components - mse:0.01034999, trend:0.02065850, hysteresis:0.00612367, smoothness:0.08129773
+epoch:102, train_loss:0.02373170480132103, val_loss:0.00964232615660876
+  components - mse:0.01025157, trend:0.02044835, hysteresis:0.00235949, smoothness:0.08158108
+epoch:103, train_loss:0.024069402366876602, val_loss:0.010108012639518296
+  components - mse:0.01028964, trend:0.02063717, hysteresis:0.00406393, smoothness:0.08188304
+epoch:104, train_loss:0.023855265229940414, val_loss:0.010524655376294894
+  components - mse:0.01040632, trend:0.02076208, hysteresis:0.00530836, smoothness:0.08108513
+epoch:105, train_loss:0.024279490113258362, val_loss:0.010232802596874535
+  components - mse:0.01032898, trend:0.02064605, hysteresis:0.00247017, smoothness:0.08145863
+epoch:106, train_loss:0.024129658937454224, val_loss:0.00988308059251202
+  components - mse:0.01027328, trend:0.02048944, hysteresis:0.00188128, smoothness:0.08154181
+epoch:107, train_loss:0.0234440378844738, val_loss:0.009629353265544134
+  components - mse:0.01030321, trend:0.02054364, hysteresis:0.00419556, smoothness:0.08159870
+epoch:108, train_loss:0.023760490119457245, val_loss:0.00991113921294787
+  components - mse:0.01038347, trend:0.02065017, hysteresis:0.00530989, smoothness:0.08118271
+epoch:109, train_loss:0.024982020258903503, val_loss:0.00968680517481906
+  components - mse:0.01023002, trend:0.02042925, hysteresis:0.00235851, smoothness:0.08186213
+epoch:110, train_loss:0.02411492168903351, val_loss:0.009927988484767931
+  components - mse:0.01021660, trend:0.02041177, hysteresis:0.00148208, smoothness:0.08177396
+epoch:111, train_loss:0.02228982001543045, val_loss:0.009279457286798529
+  components - mse:0.01027363, trend:0.02044397, hysteresis:0.00228204, smoothness:0.08136820
+epoch:112, train_loss:0.023044385015964508, val_loss:0.009798157311576818
+  components - mse:0.01017664, trend:0.02031918, hysteresis:0.00193530, smoothness:0.08195840
+epoch:113, train_loss:0.023575514554977417, val_loss:0.00945099554623344
+  components - mse:0.01023515, trend:0.02040291, hysteresis:0.00152182, smoothness:0.08165532
+epoch:114, train_loss:0.02432510070502758, val_loss:0.010200787684880197
+  components - mse:0.01015500, trend:0.02031352, hysteresis:0.00000000, smoothness:0.08206826
+epoch:115, train_loss:0.024312332272529602, val_loss:0.009951690611030375
+  components - mse:0.01027129, trend:0.02053754, hysteresis:0.00182396, smoothness:0.08154072
+epoch:116, train_loss:0.025011969730257988, val_loss:0.009906044745418643
+  components - mse:0.01019122, trend:0.02028444, hysteresis:0.00152420, smoothness:0.08195261
+epoch:117, train_loss:0.02512519806623459, val_loss:0.009675699203009052
+  components - mse:0.01037135, trend:0.02071156, hysteresis:0.00296960, smoothness:0.08137654
+epoch:118, train_loss:0.023388739675283432, val_loss:0.009699668103296841
+  components - mse:0.01028654, trend:0.02057794, hysteresis:0.00266505, smoothness:0.08155353
+epoch:119, train_loss:0.027707170695066452, val_loss:0.009371301741339266
+  components - mse:0.01019813, trend:0.02039428, hysteresis:0.00084534, smoothness:0.08207385
+epoch:120, train_loss:0.024135075509548187, val_loss:0.009613954279172634
+  components - mse:0.01028104, trend:0.02051637, hysteresis:0.00454748, smoothness:0.08145022
+epoch:121, train_loss:0.02433767542243004, val_loss:0.009835675358772278
+  components - mse:0.01026472, trend:0.02058467, hysteresis:0.00251655, smoothness:0.08163001
+epoch:122, train_loss:0.025506552308797836, val_loss:0.010046215145848691
+  components - mse:0.01018364, trend:0.02038712, hysteresis:0.00106771, smoothness:0.08195109
+epoch:123, train_loss:0.024980545043945312, val_loss:0.009584506092193936
+  components - mse:0.01028046, trend:0.02057362, hysteresis:0.00371958, smoothness:0.08134664
+epoch:124, train_loss:0.024749822914600372, val_loss:0.009994562066692327
+  components - mse:0.01021564, trend:0.02036674, hysteresis:0.00226342, smoothness:0.08173784
+epoch:125, train_loss:0.03384096920490265, val_loss:0.010366759346132832
+  components - mse:0.01022474, trend:0.02037254, hysteresis:0.00556951, smoothness:0.08163643
+epoch:126, train_loss:0.024747509509325027, val_loss:0.009434361409928118
+  components - mse:0.01032331, trend:0.02061018, hysteresis:0.00343186, smoothness:0.08140014
+epoch:127, train_loss:0.024305138736963272, val_loss:0.009925158145571393
+  components - mse:0.01017093, trend:0.02041108, hysteresis:0.00146604, smoothness:0.08210311
+epoch:128, train_loss:0.023166608065366745, val_loss:0.00994107567904783
+  components - mse:0.01023267, trend:0.02046184, hysteresis:0.00290010, smoothness:0.08186245
+epoch:129, train_loss:0.023159630596637726, val_loss:0.009617027211269098
+  components - mse:0.01012909, trend:0.02013150, hysteresis:0.00041286, smoothness:0.08181157
+epoch:130, train_loss:0.024310648441314697, val_loss:0.009778989046545965
+  components - mse:0.01011273, trend:0.02018156, hysteresis:0.00000000, smoothness:0.08217724
+epoch:131, train_loss:0.023262832313776016, val_loss:0.009698790647754712
+  components - mse:0.01020347, trend:0.02035187, hysteresis:0.00175889, smoothness:0.08177007
+epoch:132, train_loss:0.02148986980319023, val_loss:0.009754595862302397
+  components - mse:0.01027026, trend:0.02048766, hysteresis:0.00204594, smoothness:0.08149388
+epoch:133, train_loss:0.02414209023118019, val_loss:0.010112311142230672
+  components - mse:0.01020034, trend:0.02036323, hysteresis:0.00334239, smoothness:0.08159327
+epoch:134, train_loss:0.022880196571350098, val_loss:0.009708532132208347
+  components - mse:0.01016671, trend:0.02037687, hysteresis:0.00087721, smoothness:0.08202008
+epoch:135, train_loss:0.02527175471186638, val_loss:0.009709974634461105
+  components - mse:0.01013324, trend:0.02018651, hysteresis:0.00121752, smoothness:0.08193385
+epoch:136, train_loss:0.023725584149360657, val_loss:0.009663075641063707
+  components - mse:0.01010234, trend:0.02020739, hysteresis:0.00154833, smoothness:0.08227459
+epoch:137, train_loss:0.02409479022026062, val_loss:0.009179695160128176
+  components - mse:0.01010842, trend:0.02022013, hysteresis:0.00097060, smoothness:0.08209448
+epoch:138, train_loss:0.024802062660455704, val_loss:0.009552596835419536
+  components - mse:0.01011772, trend:0.02023825, hysteresis:0.00171346, smoothness:0.08221446
+epoch:139, train_loss:0.022756949067115784, val_loss:0.009619122470862098
+  components - mse:0.01013993, trend:0.02024079, hysteresis:0.00091527, smoothness:0.08203572
+epoch:140, train_loss:0.025812938809394836, val_loss:0.010966484202072024
+  components - mse:0.01028626, trend:0.02056764, hysteresis:0.00561939, smoothness:0.08174536
+epoch:141, train_loss:0.024645280092954636, val_loss:0.009661292707148408
+  components - mse:0.01024325, trend:0.02047074, hysteresis:0.00291808, smoothness:0.08182638
+epoch:142, train_loss:0.02415485493838787, val_loss:0.009783657417366547
+  components - mse:0.01014854, trend:0.02029736, hysteresis:0.00104037, smoothness:0.08193140
+epoch:143, train_loss:0.023067738860845566, val_loss:0.009645700704173319
+  components - mse:0.01008574, trend:0.02011805, hysteresis:0.00064650, smoothness:0.08215991
+epoch:144, train_loss:0.022916458547115326, val_loss:0.009887131147219666
+  components - mse:0.01005518, trend:0.02011211, hysteresis:0.00000000, smoothness:0.08233323
+epoch:145, train_loss:0.024155104532837868, val_loss:0.009426389105751045
+  components - mse:0.01005486, trend:0.02003125, hysteresis:0.00041899, smoothness:0.08210876
+epoch:146, train_loss:0.025187576189637184, val_loss:0.009907397009166223
+  components - mse:0.01022678, trend:0.02045304, hysteresis:0.00605306, smoothness:0.08169550
+epoch:147, train_loss:0.025385458022356033, val_loss:0.010140108809407269
+  components - mse:0.01007514, trend:0.02005055, hysteresis:0.00097701, smoothness:0.08215194
+epoch:148, train_loss:0.024121014401316643, val_loss:0.009264149886023785
+  components - mse:0.01014506, trend:0.02028300, hysteresis:0.00192675, smoothness:0.08193958
+epoch:149, train_loss:0.020081162452697754, val_loss:0.009758393945438521
+  components - mse:0.01009646, trend:0.02013564, hysteresis:0.00039307, smoothness:0.08211694
+epoch:150, train_loss:0.02404196187853813, val_loss:0.009949459278556918
+  components - mse:0.01007644, trend:0.02010640, hysteresis:0.00079373, smoothness:0.08203219
+epoch:151, train_loss:0.022530391812324524, val_loss:0.009578233701176941
+  components - mse:0.01010370, trend:0.02016275, hysteresis:0.00091444, smoothness:0.08199634
+epoch:152, train_loss:0.024179041385650635, val_loss:0.009624040768747883
+  components - mse:0.01006212, trend:0.02006696, hysteresis:0.00055843, smoothness:0.08214556
+epoch:153, train_loss:0.022463174536824226, val_loss:0.009598376412343766
+  components - mse:0.01014531, trend:0.02025422, hysteresis:0.00356383, smoothness:0.08199542
+epoch:154, train_loss:0.020083267241716385, val_loss:0.010029321918929262
+  components - mse:0.01010279, trend:0.02017284, hysteresis:0.00210685, smoothness:0.08205848
+epoch:155, train_loss:0.024993445724248886, val_loss:0.009716776016700481
+  components - mse:0.01017323, trend:0.02029795, hysteresis:0.00386319, smoothness:0.08190003
+epoch:156, train_loss:0.024335063993930817, val_loss:0.009302886685223452
+  components - mse:0.01017339, trend:0.02031508, hysteresis:0.00318778, smoothness:0.08182370
+epoch:157, train_loss:0.02437557652592659, val_loss:0.009738905721211008
+  components - mse:0.01014437, trend:0.02022420, hysteresis:0.00130586, smoothness:0.08198967
+epoch:158, train_loss:0.02483685314655304, val_loss:0.009211158463066178
+  components - mse:0.01015040, trend:0.02027650, hysteresis:0.00298549, smoothness:0.08207810
+epoch:159, train_loss:0.02327856607735157, val_loss:0.009962098556570709
+  components - mse:0.01005381, trend:0.02012609, hysteresis:0.00000000, smoothness:0.08221949
+epoch:160, train_loss:0.026071541011333466, val_loss:0.010127383367424565
+  components - mse:0.01008030, trend:0.02016081, hysteresis:0.00244791, smoothness:0.08214983
+epoch:161, train_loss:0.02374424785375595, val_loss:0.009767883706704847
+  components - mse:0.01013344, trend:0.02035111, hysteresis:0.00301859, smoothness:0.08222016
+epoch:162, train_loss:0.02232302539050579, val_loss:0.01002581771795771
+  components - mse:0.01015845, trend:0.02029170, hysteresis:0.00346061, smoothness:0.08197614
+epoch:163, train_loss:0.02414870634675026, val_loss:0.010031483768086349
+  components - mse:0.01013515, trend:0.02028262, hysteresis:0.00514442, smoothness:0.08189268
+epoch:164, train_loss:0.024373745545744896, val_loss:0.010105408778014992
+  components - mse:0.01014342, trend:0.02024564, hysteresis:0.00441809, smoothness:0.08197622
+epoch:165, train_loss:0.022657517343759537, val_loss:0.009845090198463627
+  components - mse:0.01017367, trend:0.02034284, hysteresis:0.00662772, smoothness:0.08186676
+epoch:166, train_loss:0.02291005849838257, val_loss:0.00999473299764629
+  components - mse:0.01019382, trend:0.02038928, hysteresis:0.00406863, smoothness:0.08158578
+epoch:167, train_loss:0.02570532262325287, val_loss:0.009859239932016603
+  components - mse:0.01012937, trend:0.02023144, hysteresis:0.00152844, smoothness:0.08198792
+epoch:168, train_loss:0.024006573483347893, val_loss:0.009186380842168416
+  components - mse:0.01006396, trend:0.02012054, hysteresis:0.00060609, smoothness:0.08231034
+epoch:169, train_loss:0.022848794236779213, val_loss:0.009834645914712123
+  components - mse:0.01004315, trend:0.02002370, hysteresis:0.00238827, smoothness:0.08219025
+epoch:170, train_loss:0.02312486059963703, val_loss:0.010034640386168445
+  components - mse:0.01008701, trend:0.02017844, hysteresis:0.00230852, smoothness:0.08212967
+epoch:171, train_loss:0.025318505242466927, val_loss:0.010261747886293702
+  components - mse:0.01005774, trend:0.02007039, hysteresis:0.00079895, smoothness:0.08223211
+epoch:172, train_loss:0.02307557687163353, val_loss:0.009741125412152283
+  components - mse:0.01003659, trend:0.02007676, hysteresis:0.00000000, smoothness:0.08240835
+epoch:173, train_loss:0.023405183106660843, val_loss:0.009597997264271336
+  components - mse:0.01007693, trend:0.02009922, hysteresis:0.00397617, smoothness:0.08198695
+epoch:174, train_loss:0.023961257189512253, val_loss:0.009495693209048892
+  components - mse:0.01005205, trend:0.02010061, hysteresis:0.00056471, smoothness:0.08224125
+epoch:175, train_loss:0.023254569619894028, val_loss:0.009917268712472702
+  components - mse:0.01001162, trend:0.01995745, hysteresis:0.00234811, smoothness:0.08220185
+epoch:176, train_loss:0.026014402508735657, val_loss:0.009688379825092852
+  components - mse:0.01005032, trend:0.02006029, hysteresis:0.00157220, smoothness:0.08228743
+epoch:177, train_loss:0.026408467441797256, val_loss:0.009742168044405324
+  components - mse:0.01014836, trend:0.02028107, hysteresis:0.00469000, smoothness:0.08200323
+epoch:178, train_loss:0.02370230294764042, val_loss:0.00968985360980566
+  components - mse:0.01015173, trend:0.02028573, hysteresis:0.00268434, smoothness:0.08180726
+epoch:179, train_loss:0.023122023791074753, val_loss:0.009760772559924849
+  components - mse:0.01009406, trend:0.02016791, hysteresis:0.00433547, smoothness:0.08204250
+epoch:180, train_loss:0.03428737819194794, val_loss:0.010007399799568313
+  components - mse:0.01000003, trend:0.01994670, hysteresis:0.00178250, smoothness:0.08228318
+epoch:181, train_loss:0.025043822824954987, val_loss:0.010184968123212457
+  components - mse:0.01007308, trend:0.02013763, hysteresis:0.00313244, smoothness:0.08218836
+epoch:182, train_loss:0.026774588972330093, val_loss:0.009801105479709804
+  components - mse:0.01004530, trend:0.02007078, hysteresis:0.00153386, smoothness:0.08223194
+epoch:183, train_loss:0.022391173988580704, val_loss:0.009649301430077426
+  components - mse:0.01002940, trend:0.02004657, hysteresis:0.00058158, smoothness:0.08241553
+epoch:184, train_loss:0.023071564733982086, val_loss:0.009839423982027386
+  components - mse:0.01006756, trend:0.02008261, hysteresis:0.00268046, smoothness:0.08203977
+epoch:185, train_loss:0.025525692850351334, val_loss:0.009860400692559779
+  components - mse:0.01008024, trend:0.02013340, hysteresis:0.00160583, smoothness:0.08193656
+epoch:186, train_loss:0.022147174924612045, val_loss:0.00973824439902923
+  components - mse:0.01002327, trend:0.02005385, hysteresis:0.00204259, smoothness:0.08214345
+epoch:187, train_loss:0.024483364075422287, val_loss:0.009584015434873956
+  components - mse:0.01008816, trend:0.02019177, hysteresis:0.00233165, smoothness:0.08196008
+epoch:188, train_loss:0.02478174865245819, val_loss:0.010109708860649593
+  components - mse:0.01003062, trend:0.02001840, hysteresis:0.00253877, smoothness:0.08219733
+epoch:189, train_loss:0.022786099463701248, val_loss:0.009555768288139786
+  components - mse:0.01001834, trend:0.01997988, hysteresis:0.00065654, smoothness:0.08221397
+epoch:190, train_loss:0.022418178617954254, val_loss:0.009745011405487145
+  components - mse:0.01011602, trend:0.02019051, hysteresis:0.00577411, smoothness:0.08184282
+epoch:191, train_loss:0.02417478710412979, val_loss:0.00965205511809992
+  components - mse:0.01002775, trend:0.02000791, hysteresis:0.00039755, smoothness:0.08220490
+epoch:192, train_loss:0.024807937443256378, val_loss:0.009767865878529847
+  components - mse:0.01003270, trend:0.02008442, hysteresis:0.00148632, smoothness:0.08217050
+epoch:193, train_loss:0.023465197533369064, val_loss:0.009428802145911115
+  components - mse:0.01002181, trend:0.02003275, hysteresis:0.00211117, smoothness:0.08222805
+epoch:194, train_loss:0.022750455886125565, val_loss:0.010111824542816197
+  components - mse:0.01005166, trend:0.02013548, hysteresis:0.00322537, smoothness:0.08230710
+epoch:195, train_loss:0.023323599249124527, val_loss:0.01002177138746317
+  components - mse:0.01006297, trend:0.02015653, hysteresis:0.00360333, smoothness:0.08219034
+epoch:196, train_loss:0.026816535741090775, val_loss:0.00960390838528318
+  components - mse:0.01008173, trend:0.02011756, hysteresis:0.00253679, smoothness:0.08192793
+epoch:197, train_loss:0.0224884245544672, val_loss:0.009710090816952288
+  components - mse:0.00999899, trend:0.02000403, hysteresis:0.00031413, smoothness:0.08236853
+epoch:198, train_loss:0.0244995579123497, val_loss:0.009308465889522008
+  components - mse:0.01002174, trend:0.01997582, hysteresis:0.00196174, smoothness:0.08218896
+epoch:199, train_loss:0.024976611137390137, val_loss:0.009840210949602936
+  components - mse:0.01002979, trend:0.02008061, hysteresis:0.00256013, smoothness:0.08197254
+epoch:200, train_loss:0.02231144905090332, val_loss:0.009562418979060437
+  components - mse:0.01001046, trend:0.02007820, hysteresis:0.00000000, smoothness:0.08238974
+epoch:201, train_loss:0.021878205239772797, val_loss:0.00938480397287224
+  components - mse:0.01003151, trend:0.02009651, hysteresis:0.00327797, smoothness:0.08223388
+epoch:202, train_loss:0.025925368070602417, val_loss:0.009681721633699323
+  components - mse:0.01001115, trend:0.01998339, hysteresis:0.00174677, smoothness:0.08213156
+epoch:203, train_loss:0.024675412103533745, val_loss:0.009853545809164643
+  components - mse:0.00999603, trend:0.01997387, hysteresis:0.00107805, smoothness:0.08250833
+epoch:204, train_loss:0.023813989013433456, val_loss:0.009459568004656051
+  components - mse:0.01003955, trend:0.02005061, hysteresis:0.00285542, smoothness:0.08214003
+epoch:205, train_loss:0.026637369766831398, val_loss:0.009907419394169534
+  components - mse:0.01008421, trend:0.02017797, hysteresis:0.00517033, smoothness:0.08199335
+epoch:206, train_loss:0.02332678809762001, val_loss:0.009737530191029822
+  components - mse:0.01001122, trend:0.02001461, hysteresis:0.00179291, smoothness:0.08215079
+epoch:207, train_loss:0.023622270673513412, val_loss:0.010218074229279799
+  components - mse:0.00998306, trend:0.01991858, hysteresis:0.00292383, smoothness:0.08213504
+epoch:208, train_loss:0.02266564592719078, val_loss:0.0097450365345659
+  components - mse:0.01005730, trend:0.02012170, hysteresis:0.00498844, smoothness:0.08201669
+epoch:209, train_loss:0.023447532206773758, val_loss:0.0096308651513287
+  components - mse:0.01003435, trend:0.02009285, hysteresis:0.00362775, smoothness:0.08217786
+epoch:210, train_loss:0.024671204388141632, val_loss:0.00958433629213167
+  components - mse:0.00998514, trend:0.01997661, hysteresis:0.00000000, smoothness:0.08242208
+epoch:211, train_loss:0.024319276213645935, val_loss:0.00973443898172783
+  components - mse:0.01004299, trend:0.02005415, hysteresis:0.00287715, smoothness:0.08197640
+epoch:212, train_loss:0.021854624152183533, val_loss:0.009721619293226727
+  components - mse:0.01002240, trend:0.02001002, hysteresis:0.00495625, smoothness:0.08188774
+epoch:213, train_loss:0.02440367452800274, val_loss:0.009580997417547874
+  components - mse:0.01000002, trend:0.01998443, hysteresis:0.00040440, smoothness:0.08231676
+epoch:214, train_loss:0.022824237123131752, val_loss:0.00993887847289443
+  components - mse:0.00998969, trend:0.02002097, hysteresis:0.00208909, smoothness:0.08231210
+epoch:215, train_loss:0.022797513753175735, val_loss:0.009632528826062168
+  components - mse:0.01007848, trend:0.02015980, hysteresis:0.00261818, smoothness:0.08213927
+epoch:216, train_loss:0.023550350219011307, val_loss:0.009714472722927374
+  components - mse:0.00997846, trend:0.01994043, hysteresis:0.00205100, smoothness:0.08219681
+epoch:217, train_loss:0.022878654301166534, val_loss:0.009514190472795494
+  components - mse:0.01001997, trend:0.02008817, hysteresis:0.00328569, smoothness:0.08219778
+epoch:218, train_loss:0.0318695493042469, val_loss:0.009837779100053012
+  components - mse:0.01001723, trend:0.02002339, hysteresis:0.00425528, smoothness:0.08204359
+epoch:219, train_loss:0.024220500141382217, val_loss:0.009766902109341962
+  components - mse:0.00999272, trend:0.02000095, hysteresis:0.00251175, smoothness:0.08238360
+epoch:220, train_loss:0.02465258166193962, val_loss:0.009297786263882049
+  components - mse:0.00995822, trend:0.01989944, hysteresis:0.00000000, smoothness:0.08241560
+epoch:221, train_loss:0.02228778973221779, val_loss:0.009580620730827962
+  components - mse:0.00995894, trend:0.01992777, hysteresis:0.00032416, smoothness:0.08253226
+epoch:222, train_loss:0.023118117824196815, val_loss:0.00955683134296643
+  components - mse:0.00997357, trend:0.01992224, hysteresis:0.00074877, smoothness:0.08225886
+epoch:223, train_loss:0.0225685928016901, val_loss:0.009710778864765806
+  components - mse:0.00998419, trend:0.01995372, hysteresis:0.00220082, smoothness:0.08223354
+epoch:224, train_loss:0.02627071924507618, val_loss:0.009492150408082775
+  components - mse:0.00999081, trend:0.01998488, hysteresis:0.00205684, smoothness:0.08217022
+epoch:225, train_loss:0.02392622083425522, val_loss:0.009923084722166615
+  components - mse:0.01000759, trend:0.02005706, hysteresis:0.00420317, smoothness:0.08225388
+epoch:226, train_loss:0.02336135134100914, val_loss:0.009499448235146701
+  components - mse:0.00996560, trend:0.01989231, hysteresis:0.00059572, smoothness:0.08224857
+epoch:227, train_loss:0.025338632985949516, val_loss:0.009616003787544156
+  components - mse:0.00994807, trend:0.01991895, hysteresis:0.00000000, smoothness:0.08249106
+epoch:228, train_loss:0.022581612691283226, val_loss:0.009606178251228161
+  components - mse:0.00997491, trend:0.01998692, hysteresis:0.00147779, smoothness:0.08238623
+epoch:229, train_loss:0.025005001574754715, val_loss:0.009756509131485862
+  components - mse:0.00996762, trend:0.01997889, hysteresis:0.00201976, smoothness:0.08234369
+epoch:230, train_loss:0.023389868438243866, val_loss:0.009525480829844517
+  components - mse:0.00992725, trend:0.01979924, hysteresis:0.00000000, smoothness:0.08242216
+epoch:231, train_loss:0.02332529053092003, val_loss:0.009625994650247906
+  components - mse:0.00994368, trend:0.01985313, hysteresis:0.00060804, smoothness:0.08251696
+epoch:232, train_loss:0.02451745793223381, val_loss:0.009550188268933977
+  components - mse:0.00996821, trend:0.01989515, hysteresis:0.00220958, smoothness:0.08217123
+epoch:233, train_loss:0.024858228862285614, val_loss:0.009707131589363729
+  components - mse:0.00995631, trend:0.01993507, hysteresis:0.00254863, smoothness:0.08228900
+epoch:234, train_loss:0.024314239621162415, val_loss:0.009629425393151385
+  components - mse:0.00999532, trend:0.02002063, hysteresis:0.00355852, smoothness:0.08235303
+epoch:235, train_loss:0.026237815618515015, val_loss:0.009590610778624458
+  components - mse:0.00996056, trend:0.01987092, hysteresis:0.00115825, smoothness:0.08220860
+epoch:236, train_loss:0.024063771590590477, val_loss:0.009454968285613827
+  components - mse:0.00997242, trend:0.01993899, hysteresis:0.00308056, smoothness:0.08213066
+epoch:237, train_loss:0.02313840761780739, val_loss:0.009560651994044227
+  components - mse:0.01000278, trend:0.02003000, hysteresis:0.00356951, smoothness:0.08218156
+epoch:238, train_loss:0.022030606865882874, val_loss:0.009563138325964766
+  components - mse:0.00995009, trend:0.01981764, hysteresis:0.00033618, smoothness:0.08244149
+epoch:239, train_loss:0.0249335914850235, val_loss:0.00952629345868315
+  components - mse:0.00996772, trend:0.01995295, hysteresis:0.00310074, smoothness:0.08217652
+epoch:240, train_loss:0.024839408695697784, val_loss:0.009540447682541395
+  components - mse:0.00994146, trend:0.01988826, hysteresis:0.00084295, smoothness:0.08251067
+epoch:241, train_loss:0.02406778372824192, val_loss:0.0094878711970523
+  components - mse:0.00995943, trend:0.01994278, hysteresis:0.00228253, smoothness:0.08219458
+epoch:242, train_loss:0.026093466207385063, val_loss:0.009463058817865593
+  components - mse:0.01005982, trend:0.02012610, hysteresis:0.00619298, smoothness:0.08191339
+epoch:243, train_loss:0.025301098823547363, val_loss:0.00953571789432317
+  components - mse:0.01000011, trend:0.01997060, hysteresis:0.00439665, smoothness:0.08196669
+epoch:244, train_loss:0.025504477322101593, val_loss:0.009390673217629748
+  components - mse:0.00997149, trend:0.01997940, hysteresis:0.00071065, smoothness:0.08218473
+epoch:245, train_loss:0.023498255759477615, val_loss:0.009625839867762156
+  components - mse:0.00995794, trend:0.01993374, hysteresis:0.00235699, smoothness:0.08239828
+epoch:246, train_loss:0.023308787494897842, val_loss:0.009520746634474822
+  components - mse:0.00995886, trend:0.01988198, hysteresis:0.00148932, smoothness:0.08231334
+epoch:247, train_loss:0.025078654289245605, val_loss:0.009473519732377358
+  components - mse:0.00992113, trend:0.01983178, hysteresis:0.00000000, smoothness:0.08233932
+epoch:248, train_loss:0.023710094392299652, val_loss:0.009757353009523026
+  components - mse:0.00994553, trend:0.01988215, hysteresis:0.00220611, smoothness:0.08236305
+epoch:249, train_loss:0.022199083119630814, val_loss:0.009728385667715753
+  components - mse:0.00994756, trend:0.01985871, hysteresis:0.00066668, smoothness:0.08252656
+epoch:250, train_loss:0.022336672991514206, val_loss:0.009421170256765825
+  components - mse:0.00995875, trend:0.01990939, hysteresis:0.00333208, smoothness:0.08226917
+epoch:251, train_loss:0.02528022602200508, val_loss:0.009525113689180995
+  components - mse:0.00994541, trend:0.01986070, hysteresis:0.00272443, smoothness:0.08217003
+epoch:252, train_loss:0.024919673800468445, val_loss:0.009468919497781567
+  components - mse:0.00992649, trend:0.01978277, hysteresis:0.00000000, smoothness:0.08228649
+epoch:253, train_loss:0.022763602435588837, val_loss:0.009944961855321057
+  components - mse:0.00995523, trend:0.01991063, hysteresis:0.00216136, smoothness:0.08242217
+epoch:254, train_loss:0.022439707070589066, val_loss:0.009565208689309657
+  components - mse:0.00994190, trend:0.01984164, hysteresis:0.00181445, smoothness:0.08226104
+epoch:255, train_loss:0.023756243288517, val_loss:0.009709291542614145
+  components - mse:0.00995444, trend:0.01996671, hysteresis:0.00222834, smoothness:0.08238954
+epoch:256, train_loss:0.02324455976486206, val_loss:0.009672103516225303
+  components - mse:0.00995410, trend:0.01996298, hysteresis:0.00253653, smoothness:0.08229329
+epoch:257, train_loss:0.024566730484366417, val_loss:0.009682699871648635
+  components - mse:0.00996647, trend:0.01992359, hysteresis:0.00360682, smoothness:0.08208346
+epoch:258, train_loss:0.024797338992357254, val_loss:0.009687698695675604
+  components - mse:0.00993222, trend:0.01988041, hysteresis:0.00310504, smoothness:0.08248792
+epoch:259, train_loss:0.025245212018489838, val_loss:0.0096725047333166
+  components - mse:0.00993829, trend:0.01986109, hysteresis:0.00298928, smoothness:0.08231000
+epoch:260, train_loss:0.022438202053308487, val_loss:0.00968153215944767
+  components - mse:0.00995686, trend:0.01990973, hysteresis:0.00267656, smoothness:0.08224448
+epoch:261, train_loss:0.023899631574749947, val_loss:0.009581909481702107
+  components - mse:0.00994838, trend:0.01994173, hysteresis:0.00290702, smoothness:0.08215892
+epoch:262, train_loss:0.023027479648590088, val_loss:0.009415587144238608
+  components - mse:0.00995536, trend:0.01993480, hysteresis:0.00342082, smoothness:0.08211986
+epoch:263, train_loss:0.02389707788825035, val_loss:0.009552634520722287
+  components - mse:0.00991352, trend:0.01984463, hysteresis:0.00000000, smoothness:0.08248611
+epoch:264, train_loss:0.024362679570913315, val_loss:0.009519820450805128
+  components - mse:0.00993497, trend:0.01987660, hysteresis:0.00000000, smoothness:0.08252536
+epoch:265, train_loss:0.023388151079416275, val_loss:0.009707639210059174
+  components - mse:0.00990917, trend:0.01974898, hysteresis:0.00213666, smoothness:0.08225099
+epoch:266, train_loss:0.025205176323652267, val_loss:0.009556245441282434
+  components - mse:0.00993907, trend:0.01985446, hysteresis:0.00419138, smoothness:0.08225131
+epoch:267, train_loss:0.021632589399814606, val_loss:0.009658812046317118
+  components - mse:0.00992307, trend:0.01981188, hysteresis:0.00145830, smoothness:0.08218276
+epoch:268, train_loss:0.024493657052516937, val_loss:0.009520403741459762
+  components - mse:0.00991471, trend:0.01978297, hysteresis:0.00173627, smoothness:0.08231402
+epoch:269, train_loss:0.024472955614328384, val_loss:0.009534867014735937
+  components - mse:0.00992677, trend:0.01979977, hysteresis:0.00414329, smoothness:0.08226245
+epoch:270, train_loss:0.024726439267396927, val_loss:0.009523862357517439
+  components - mse:0.00994248, trend:0.01987777, hysteresis:0.00203013, smoothness:0.08224388
+epoch:271, train_loss:0.021156996488571167, val_loss:0.009461721604956048
+  components - mse:0.00994389, trend:0.01988206, hysteresis:0.00291514, smoothness:0.08238034
+epoch:272, train_loss:0.025023607537150383, val_loss:0.009589435133550848
+  components - mse:0.00989816, trend:0.01975532, hysteresis:0.00000000, smoothness:0.08262175
+epoch:273, train_loss:0.022551335394382477, val_loss:0.009549608354323677
+  components - mse:0.00992363, trend:0.01981088, hysteresis:0.00215548, smoothness:0.08228322
+epoch:274, train_loss:0.024961156770586967, val_loss:0.009608165427510227
+  components - mse:0.00990454, trend:0.01985913, hysteresis:0.00158007, smoothness:0.08238271
+epoch:275, train_loss:0.024447467178106308, val_loss:0.009582843564982926
+  components - mse:0.00995198, trend:0.01992269, hysteresis:0.00404499, smoothness:0.08224928
+epoch:276, train_loss:0.02252756804227829, val_loss:0.00949190738278308
+  components - mse:0.00991693, trend:0.01981657, hysteresis:0.00248542, smoothness:0.08225059
+epoch:277, train_loss:0.022385479882359505, val_loss:0.009593153073053275
+  components - mse:0.00991014, trend:0.01980826, hysteresis:0.00000000, smoothness:0.08245624
+epoch:278, train_loss:0.022792816162109375, val_loss:0.009518680395558476
+  components - mse:0.00992299, trend:0.01984832, hysteresis:0.00131735, smoothness:0.08241725
+epoch:279, train_loss:0.022678405046463013, val_loss:0.009555900668991464
+  components - mse:0.00991343, trend:0.01985810, hysteresis:0.00343823, smoothness:0.08243068
+epoch:280, train_loss:0.022087763994932175, val_loss:0.009596120798960328
+  components - mse:0.00993693, trend:0.01983385, hysteresis:0.00605151, smoothness:0.08230703
+epoch:281, train_loss:0.02489321678876877, val_loss:0.009619956919258195
+  components - mse:0.00994106, trend:0.01989092, hysteresis:0.00197589, smoothness:0.08237585
+epoch:282, train_loss:0.022541645914316177, val_loss:0.009586088242940605
+  components - mse:0.00992935, trend:0.01989824, hysteresis:0.00227569, smoothness:0.08233269
+epoch:283, train_loss:0.025308800861239433, val_loss:0.009597360422568662
+  components - mse:0.00992389, trend:0.01984725, hysteresis:0.00118959, smoothness:0.08257159
+epoch:284, train_loss:0.02289658784866333, val_loss:0.009574586542190186
+  components - mse:0.00990880, trend:0.01983583, hysteresis:0.00089478, smoothness:0.08237484
+epoch:285, train_loss:0.024542437866330147, val_loss:0.009559388771387083
+  components - mse:0.00994020, trend:0.01985024, hysteresis:0.00296623, smoothness:0.08217833
+epoch:286, train_loss:0.022910725325345993, val_loss:0.00957148295960256
+  components - mse:0.00994101, trend:0.01985096, hysteresis:0.00250186, smoothness:0.08235969
+epoch:287, train_loss:0.022326629608869553, val_loss:0.009538102462621672
+  components - mse:0.00992416, trend:0.01982305, hysteresis:0.00104505, smoothness:0.08233448
+epoch:288, train_loss:0.024599090218544006, val_loss:0.009568274619856052
+  components - mse:0.00991838, trend:0.01983027, hysteresis:0.00079494, smoothness:0.08255454
+epoch:289, train_loss:0.022989576682448387, val_loss:0.009575176950810211
+  components - mse:0.00991404, trend:0.01980887, hysteresis:0.00258477, smoothness:0.08243058
+epoch:290, train_loss:0.025327153503894806, val_loss:0.009590376650781504
+  components - mse:0.00993855, trend:0.01990885, hysteresis:0.00290475, smoothness:0.08235541
+epoch:291, train_loss:0.023320738226175308, val_loss:0.009582546972004431
+  components - mse:0.00994752, trend:0.01989398, hysteresis:0.00449664, smoothness:0.08219304
+epoch:292, train_loss:0.02472000941634178, val_loss:0.009553784221809889
+  components - mse:0.00994205, trend:0.01989009, hysteresis:0.00000000, smoothness:0.08236881
+epoch:293, train_loss:0.02173067070543766, val_loss:0.009554428364416319
+  components - mse:0.00991147, trend:0.01983470, hysteresis:0.00047398, smoothness:0.08239223
+epoch:294, train_loss:0.024382788687944412, val_loss:0.009566126324768578
+  components - mse:0.00991469, trend:0.01983182, hysteresis:0.00027499, smoothness:0.08258591
+epoch:295, train_loss:0.024756809696555138, val_loss:0.009568490836370205
+  components - mse:0.00992740, trend:0.01983770, hysteresis:0.00049511, smoothness:0.08255146
+epoch:296, train_loss:0.02365117147564888, val_loss:0.0095652242390705
+  components - mse:0.00993884, trend:0.01979918, hysteresis:0.00065803, smoothness:0.08236372
+epoch:297, train_loss:0.023869171738624573, val_loss:0.009563569727885936
+  components - mse:0.00994488, trend:0.01986248, hysteresis:0.00262337, smoothness:0.08222222
+epoch:298, train_loss:0.025160927325487137, val_loss:0.00956333109310695
+  components - mse:0.00991919, trend:0.01986074, hysteresis:0.00174853, smoothness:0.08243524
+epoch:299, train_loss:0.023621318861842155, val_loss:0.009564065889987563
+  components - mse:0.00991113, trend:0.01982866, hysteresis:0.00214920, smoothness:0.08255900
+模型已保存为 F:\coding\ShoulDeX\ShoulDex_v1.0\ShoulDex_v1.5\model\test_0808_5_lstm.pth
+总训练时间: 40.9 分钟

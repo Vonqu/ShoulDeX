@@ -15,7 +15,54 @@ import torch
 import pickle
 import numpy as np
 from collections import deque
-from lstm_model import LSTM
+
+import torch
+import torch.nn as nn
+
+class LSTM(nn.Module):
+    def __init__(self, input_size, hidden_size, num_layers, dropout, output_size):
+        super(LSTM, self).__init__()
+        self.hidden_size = hidden_size
+        self.num_layers = num_layers
+        
+        # 定义LSTM层
+        self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True)
+        
+        # 添加Layer Normalization
+        self.ln = nn.LayerNorm(hidden_size)
+        
+        # 全连接层
+        self.fc = nn.Sequential(
+            nn.Linear(hidden_size, hidden_size // 2),
+            nn.ReLU(),
+            nn.Dropout(dropout),
+            nn.Linear(hidden_size // 2, output_size)
+        )
+        
+        # 初始化LSTM权重
+        self.init_weights()
+
+    def init_weights(self):
+        for name, param in self.lstm.named_parameters():
+            if 'weight' in name:
+                nn.init.xavier_normal_(param)
+            elif 'bias' in name:
+                nn.init.zeros_(param)
+
+    def forward(self, x):
+        # 初始化隐藏状态和细胞状态
+        h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)
+        c0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)
+
+        # LSTM层前向传播
+        out, _ = self.lstm(x, (h0, c0))
+        
+        # 使用Layer Normalization
+        out = self.ln(out[:, -1, :])
+        
+        # 全连接层前向传播
+        out = self.fc(out)
+        return out 
 
 class AnglePredictionServer:
     def __init__(self, trial_id='test_0806_1'):
@@ -198,8 +245,10 @@ class AnglePredictionServer:
                     data = json.loads(message)
                     if data.get('type') == 'start_prediction':
                         print("[INFO] 收到开始预测请求")
+                        await self.start_prediction()
                     elif data.get('type') == 'stop_prediction':
                         print("[INFO] 收到停止预测请求")
+                        await self.stop_prediction()
                 except json.JSONDecodeError:
                     print(f"[WARNING] 无效的JSON消息: {message}")
                     
@@ -249,6 +298,40 @@ class AnglePredictionServer:
                 print(f"[ERROR] 广播数据错误: {e}")
             
             await asyncio.sleep(0.01)  # 短暂等待
+
+    async def start_prediction(self):
+        """开始预测"""
+        if not self.running:
+            print("[INFO] 启动预测服务")
+            self.running = True
+            # 广播开始状态给所有客户端
+            if self.clients:
+                message = json.dumps({
+                    'type': 'status',
+                    'status': 'started',
+                    'message': '预测已开始'
+                })
+                await asyncio.gather(
+                    *[client.send(message) for client in self.clients.copy()],
+                    return_exceptions=True
+                )
+        
+    async def stop_prediction(self):
+        """停止预测"""
+        if self.running:
+            print("[INFO] 停止预测服务")
+            self.running = False
+            # 广播停止状态给所有客户端
+            if self.clients:
+                message = json.dumps({
+                    'type': 'status',
+                    'status': 'stopped',
+                    'message': '预测已停止'
+                })
+                await asyncio.gather(
+                    *[client.send(message) for client in self.clients.copy()],
+                    return_exceptions=True
+                )
             
     async def start_server(self, host="localhost", port=8765):
         """启动WebSocket服务器"""
